@@ -5,7 +5,7 @@ public class SnakeLadder {
  public static final int LADDER_POS=2;
  public static final int SNAKE_POS=3;
  public static void main(String[] args) {
-   int pos=0, flag=0;
+   int pos=0, flag=0, count=0;
    while(flag==0) {
    int dieRoll=(int)(Math.random()*6) + 1;
    System.out.println("Die Roll Number: "+dieRoll);
@@ -23,9 +23,11 @@ public class SnakeLadder {
    if(pos==WIN_POSITION)
     {
        flag=1;
-       System.out.println("Player Won");
+       System.out.println("PLAYER WON");
        break;
     }
+    count++;
   }
+   System.out.println("Player Won after: "+count+" Count");
  }
 }
